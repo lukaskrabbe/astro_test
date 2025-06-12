@@ -1,22 +1,22 @@
 ---
-const pageTitle = "Home Page";
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
+const pageTitle = 'Home Page';
 ---
+
 <html lang="en">
 <head>
-	<meta charset="utf-8"/>
+	<meta charset="utf-8" />
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 	<meta name="viewport" content="width=device-width" />
-	<title>Astro</title>
+	<meta name="generator" content={Astro.generator} />
+	<title>{pageTitle}</title>
 </head>
 <body>
-<a href="/">Home</a>
-<a href="/about/">About</a>
-<a href="/blog/">Blog</a>
-
+<Navigation />
 <h1>{pageTitle}</h1>
-<p>Welcome to the Astro home page!</p>
-<p>Explore the links above to learn more about this site.</p>
-<p>Astro is a modern static site generator that allows you to build fast, content-focused websites.</p>
-
-
+<Footer />
 </body>
 </html>
